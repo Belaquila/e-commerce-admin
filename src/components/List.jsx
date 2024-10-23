@@ -1,5 +1,7 @@
 import React from "react";
 import data from "../data/products.json";
+import ListItem from "./ListItem";
+
 
 function List(){
     console.log(data)
@@ -7,11 +9,9 @@ function List(){
         <div className="item">
                 {data.map((item, index)=>{
                     return(
-                    <div key={index}>
-                        <p>{item.title}</p>
-                        <p>{item.id}</p>
-                    </div>
-                    )            
+                        <ListItem product={item} index={index}/>
+                    )
+                    
             })}
         </div>
     )
