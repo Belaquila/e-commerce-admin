@@ -66,3 +66,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.details{
+
+  width: 60vw;
+  height: auto;
+  margin-left: 20vw;
+}

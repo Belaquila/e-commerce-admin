@@ -1,15 +1,19 @@
 import React from "react";
-import data from "../data/products.json";
+import itemsData from "../data/products.json";
 import ListItem from "./ListItem";
+import {Link} from "react-router-dom";
+
 
 
 function List(){
-    console.log(data)
+
     return(
         <div className="item">
-                {data.map((item, index)=>{
+                {itemsData.map((item, index)=>{
                     return(
-                        <ListItem product={item} index={index}/>
+                        <>
+                            <ListItem product={item} index={index}/>
+                        </>
                     )
                     
             })}
