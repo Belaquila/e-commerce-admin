@@ -14,19 +14,37 @@ import { useState } from "react";
 function App() {
   const [itemsToDisplay, setItemsToDisplay] = useState(items);
 
+  // function to delete items
   const deleteItem = (itemId) => {
-    console.log("called for " +itemId)
+    console.log("called for " + itemId);
     const newArray = itemsToDisplay.filter((item) => {
       return item.id !== itemId;
     });
     setItemsToDisplay(newArray);
-    console.log("set new array done ...")
+    console.log("set new array done ...");
+  };
+
+  // function add to create and update the state
+  const addItem = (item) => {
+    setItemsToDisplay((prevItems) => {
+      const newItem = { ...item, id: prevItems.length + 1 };
+      return [newItem, ...prevItems];
+    });
   };
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<DashboardPage itemsToDisplay={itemsToDisplay} deleteItem={deleteItem}/>} />
+        <Route
+          path="/"
+          element={
+            <DashboardPage
+              itemsToDisplay={itemsToDisplay}
+              deleteItem={deleteItem}
+              addItem={addItem}
+            />
+          }
+        />
         <Route path="/About" element={<AboutPage />} />
         <Route path="/item/:itemId" element={<ItemDetailsPage />} />
         <Route path="*" element={<NotFoundPage />} />

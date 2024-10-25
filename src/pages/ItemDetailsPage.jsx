@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import List from "../components/List";
-import ListItem from "../components/ListItem";
+
 import { useParams } from "react-router-dom";
 import itemsData from "../data/products.json";
 

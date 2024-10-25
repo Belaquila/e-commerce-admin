@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom"
-import List from "../components/List"
+import { Link } from "react-router-dom";
+import List from "../components/List";
+import Form from "../components/Form";
 
+function DashboardPage(props) {
+  console.log(props);
 
-function DashboardPage(props){
-    return (
-        <List itemsToDisplay = {props.itemsToDisplay} deleteItem = {props.deleteItem}/>
-    )
-
+  return (
+    <>
+      <Form addItem={props.addItem} />
+      <List
+        itemsToDisplay={props.itemsToDisplay}
+        deleteItem={props.deleteItem}
+      />
+    </>
+  );
 }
 
 export default DashboardPage;

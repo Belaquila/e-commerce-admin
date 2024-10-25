@@ -62,3 +62,15 @@ padding: 10px;
 margin-top: 20px;
 
 }
+
+.formAddItem{
+  width: 300px;
+  height : 300px;
+  margin-left: 400px;
+  text-align: center;
+border: 1px solid #f0f0f0;
+border-radius: 10px;
+padding: 10px;
+margin-top: 20px;
+
+}
