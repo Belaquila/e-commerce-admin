@@ -11,7 +11,6 @@ function Sidebar(){
                 <NavLink to="/contact">Contact</NavLink>
             </nav>
 
-
             </aside>
 
         </>

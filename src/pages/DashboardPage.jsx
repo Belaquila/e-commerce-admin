@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import List from "../components/List"
 
-function DashboardPage(){
+
+function DashboardPage(props){
     return (
-        <List />
+        <List itemsToDisplay = {props.itemsToDisplay} deleteItem = {props.deleteItem}/>
     )
 
 }
