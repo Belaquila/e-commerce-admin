@@ -1,14 +1,13 @@
 import React from "react";
 import ListItem from "./ListItem";
-import { Link } from "react-router-dom";
 
 function List(props) {
   return (
-    <div className="item">
+    <div className="dashboard-items" >
       {props.itemsToDisplay.map((item, index) => {
         return (
           <>
-            <ListItem item={item} index={index} deleteItem={props.deleteItem} />
+            <ListItem className="dashboard-item" key= {index} item={item} deleteItem={props.deleteItem} />
           </>
         );
       })}

@@ -29,13 +29,13 @@ function Form(props) {
   return (
     <form onSubmit={handleSubmit}>
       {/* Title */}
-      <div className="formAddItem">
+      <div className="dashboard-form">
         <label>
           Title:
           <input
             type="text"
             name="title"
-            placeholder="iPhone"
+            placeholder="product name here"
             value={title}
             onChange={(e) => {
               setTitle(e.target.value);
@@ -49,7 +49,7 @@ function Form(props) {
           <input
             type="text"
             name="desription"
-            placeholder="this is the best ..."
+            placeholder="product description here"
             required={true}
             value={description}
             onChange={(e) => {
@@ -81,7 +81,7 @@ function Form(props) {
           <input
             type="number"
             name="price"
-            placeholder="999.99"
+            placeholder="999.00"
             value={price}
             onChange={(e) => {
               setPrice(e.target.value);

@@ -1,29 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
-import { useParams } from "react-router-dom";
-import itemsData from "../data/products.json";
+function ItemDetailsPage(props) {
 
-function ItemDetailsPage() {
   const { itemId } = useParams();
-  const itemDetails = itemsData.find((item) => item.id === parseInt(itemId));
 
-  console.log(itemId);
+  const item = props.itemsToDisplay.find((item) => item.id === parseInt(itemId));
+
+  const navigate = useNavigate(); // nice option
 
   return (
     <div className="details">
       <h1>Item Details Page</h1>
       <div>
-        {itemDetails && (
+        {item && (
           <>
-            <img src={itemDetails.image} />
-            <h1>
-              {itemDetails.brand} {itemDetails.description}
-            </h1>
+            {/* will be written differently ... to list all properties dynamically */}
+            <h2>{item.id}</h2>
+            <h2>{item.title}</h2>
+            <h2>{item.description}</h2>
+            <h2>{item.price}</h2>
+            <h2>{item.discountPercentage}</h2>
+            <h2>{item.rating}</h2>
+            <h2>{item.stock}</h2>
+            <h2>{item.brand}</h2>
+            <h2>{item.category}</h2>
+            <h2>{item.thumbnail}</h2>
+
 
             {/* Back button */}
             <Link to="/">
               <button className="">Back</button>
             </Link>
+            {/* Edit button that will navigate to the form for modifications */}
+            <button onClick={() => navigate(`/itemUpdate/${item.id}`)}>Edit</button>
+
+
           </>
         )}
       </div>

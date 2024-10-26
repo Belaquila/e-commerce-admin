@@ -1,9 +1,8 @@
-
 /* Navbar styles */
 .navbar {
   height: 60px;
   width: 100vw;
-  background-color: #1976D2; /* Matches the blue color in the screenshot */
+  background-color: #1976D2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,13 +19,11 @@
   top: 60px; /* Navbar height */
   left: 0;
   height: calc(100vh - 60px); /* Full height minus navbar */
-  width: 200px; /* Fixed width for sidebar */
+  width: 200px;
   background-color: #f0f0f0;
-  /*padding-top: 20px;*/
   border-right: 1px solid #ddd;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Footer styles */
 .footer {
@@ -48,29 +45,84 @@ a, li, ul {
   flex-direction: column;
   margin: 10px;
   text-justify: center;
-
 }
 
-.item {
-width: 200px;
-height : 200px;
-margin-left: 200px;
-text-align: center;
-border: 1px solid #f0f0f0;
-border-radius: 10px;
-padding: 10px;
-margin-top: 20px;
-
+/* Dashboard container */
+.dashboard {
+  width: calc(100vw - 200px); /* Full width minus sidebar */
+  max-height: calc(100vh - 110px); /* Full height minus navbar and footer */
+  margin-top: 60px; /* Align below the navbar */
+  margin-left: 200px; /* Align next to sidebar */
+  overflow-y: auto; /* Enable vertical scrolling for the entire dashboard */
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.formAddItem{
-  width: 300px;
-  height : 300px;
-  margin-left: 400px;
+/* Form styles */
+.dashboard-form {
+  width: 100%; /* Full width of the dashboard */
+  max-width: 50%;
   text-align: center;
-border: 1px solid #f0f0f0;
-border-radius: 10px;
-padding: 10px;
-margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #504aba;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-left: 200px;
+}
 
+
+
+/* Grid container for items */
+.dashboard-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 16px; /* Space between items */
+  width: 100%; /* Full width of the dashboard */
+}
+
+/* Item styles */
+.dashboard-item {
+  border: 1px solid #504aba;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for labels and inputs */
+.dashboard-form label {
+  width: 100%;
+  text-align: left; /* Align labels to the left */
+  margin-bottom: 5px;
+}
+
+.dashboard-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Style for the "Add" button */
+.dashboard-form button {
+  width: 100px;
+  padding: 10px;
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Button hover effect */
+.dashboard-form button:hover {
+  background-color: #155a9a;
 }
