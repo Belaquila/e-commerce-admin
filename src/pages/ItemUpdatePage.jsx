@@ -5,7 +5,7 @@ function ItemUpdatePage(props) {
 
   const { itemId } = useParams();
 
-  const item = props.itemsToDisplay.find((item) => item.id === parseInt(itemId));
+  const item = props.itemsToDisplay.find((item) => item.id.toString() === itemId);
 
   // Initialize state dynamically based on item properties
   const [updatedItem, setUpdatedItem] = useState({ ...item });

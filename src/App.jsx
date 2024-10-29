@@ -1,4 +1,3 @@
-import "./App.css";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,6 +10,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import { useState } from "react";
 import ItemUpdatePage from "./pages/ItemUpdatePage";
 import { useNavigate } from "react-router-dom";
+import {v4 as uuid} from "uuid"
 
 function App() {
   const [itemsToDisplay, setItemsToDisplay] = useState(items);
@@ -26,9 +26,10 @@ function App() {
   };
 
   // function add to create and update the state
+  // uuid() --> the parse doesn't work
   const addItem = (item) => {
     setItemsToDisplay((prevItems) => {
-      const newItem = { ...item, id: prevItems.length + 1 };
+      const newItem = { ...item, id: uuid()};
       return [newItem, ...prevItems];
     });
   };
@@ -43,7 +44,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="">
       <Routes>
         <Route
           path="/"
@@ -62,7 +63,9 @@ function App() {
       </Routes>
 
       <Sidebar />
+
       <Navbar />
+      
       <Footer />
     </div>
   );

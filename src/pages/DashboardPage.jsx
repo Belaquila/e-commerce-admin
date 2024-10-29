@@ -7,8 +7,8 @@ function DashboardPage(props) {
   return (
     <div className="dashboard">
       
-      <Form className="dashboard-form" addItem={props.addItem} />
-      <List className="dashboard-items"
+      <Form className="form" addItem={props.addItem} />
+      <List className=""
         itemsToDisplay={props.itemsToDisplay}
         deleteItem={props.deleteItem}
       />

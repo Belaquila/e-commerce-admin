@@ -3,36 +3,37 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 function ItemDetailsPage(props) {
 
   const { itemId } = useParams();
+  console.log(itemId.toString())
 
-  const item = props.itemsToDisplay.find((item) => item.id === parseInt(itemId));
+  const item = props.itemsToDisplay.find((item) => item.id.toString() === itemId);
 
   const navigate = useNavigate(); // nice option
 
   return (
-    <div className="details">
+    <div className="dashboard">
       <h1>Item Details Page</h1>
       <div>
         {item && (
           <>
             {/* will be written differently ... to list all properties dynamically */}
-            <h2>{item.id}</h2>
-            <h2>{item.title}</h2>
-            <h2>{item.description}</h2>
-            <h2>{item.price}</h2>
-            <h2>{item.discountPercentage}</h2>
-            <h2>{item.rating}</h2>
-            <h2>{item.stock}</h2>
-            <h2>{item.brand}</h2>
-            <h2>{item.category}</h2>
-            <h2>{item.thumbnail}</h2>
+            <p><strong>id : </strong> <span>{item.id}</span> </p>
+            <p><strong>title : </strong><span>{item.title}</span> </p>
+            <p><strong>description : </strong> <span>{item.description}</span> </p>
+            <p><strong>price : </strong> <span>{item.price}</span> </p>
+            <p><strong>discountPercentage : </strong> <span>{item.discountPercentage}</span> </p>
+            <p><strong>rating : </strong> <span>{item.rating}</span> </p>
+            <p><strong>stock : </strong> <span>{item.stock}</span> </p>
+            <p><strong>brand : </strong> <span>{item.brand}</span> </p>
+            <p><strong>category : </strong> <span>{item.category}</span> </p>
+            <p><strong>thumbnail : </strong> <span>{item.thumbnail}</span> </p>
 
 
             {/* Back button */}
             <Link to="/">
-              <button className="">Back</button>
+              <button className="btn-primary">Back</button>
             </Link>
             {/* Edit button that will navigate to the form for modifications */}
-            <button onClick={() => navigate(`/itemUpdate/${item.id}`)}>Edit</button>
+            <button className ="btn-secondary" onClick={() => navigate(`/itemUpdate/${item.id}`)}>Edit</button>
 
 
           </>

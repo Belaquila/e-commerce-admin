@@ -6,9 +6,9 @@ function Sidebar(){
             <aside className="sidebar">
 
             <nav>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/"><li>Home</li></NavLink>
+                <NavLink to="/about"><li>About</li></NavLink>
+                <NavLink to="/contact"><li>Contact</li></NavLink>
             </nav>
 
             </aside>
