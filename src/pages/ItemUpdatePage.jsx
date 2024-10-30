@@ -26,8 +26,10 @@ function ItemUpdatePage(props) {
   };
 
   return (
-    <div className="dashboard-form">
-      <h2>Update Item</h2>
+    <>
+    <h2 className="dashboard" style={{ fontWeight: 'bold',fontSize: '24px' }} >Update carefully item details and save changes</h2>
+    <div className="form">
+      
       <form onSubmit={handleSubmit}>
         {Object.keys(updatedItem).map((key) => (
           key != "id" ? (
@@ -46,9 +48,12 @@ function ItemUpdatePage(props) {
           )
 
         ))}
-        <button type="submit">Save Changes</button>
+        <button className="btn-primary" type="submit">Save Changes</button>
       </form>
     </div>
+    </>
+
+    
   );
 }
 

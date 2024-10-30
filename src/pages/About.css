@@ -1,0 +1,81 @@
+
+.dashboard {
+    width: calc(100vw - 200px);
+    /* Full width minus sidebar */
+    max-height: calc(100vh - 110px);
+    /* Full height minus navbar and footer */
+    margin-top: 60px;
+    /* Align below the navbar */
+    margin-left: 200px;
+    /* Align next to sidebar */
+    overflow-y: auto;
+    /* Enable vertical scrolling for the entire dashboard */
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+/* Container for the entire About component */
+.about-container {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  /* Project Details Section */
+  .project-details {
+    margin-bottom: 2rem;
+  }
+  
+  .project-details h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .project-details p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Team Members Section */
+  .team-members h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .member-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .member {
+    text-align: center;
+  }
+  
+  .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .member h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Social Links Styling */
+  .social-links a {
+    margin-right: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  

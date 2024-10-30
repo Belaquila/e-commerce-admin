@@ -1,5 +1,10 @@
 function NotFoundPage() {
-  return <h1>This component is NotFound</h1>;
+
+  return (
+
+  <img src="./src/assets/404_page-not-found.png" />
+
+  )
 }
 
 export default NotFoundPage;

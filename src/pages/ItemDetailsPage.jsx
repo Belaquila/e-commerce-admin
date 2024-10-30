@@ -11,7 +11,7 @@ function ItemDetailsPage(props) {
 
   return (
     <div className="dashboard">
-      <h1>Item Details Page</h1>
+      <h1> {item.title}</h1>
       <div>
         {item && (
           <>

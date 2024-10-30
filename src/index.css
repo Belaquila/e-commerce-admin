@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
- .items {
+.items {
   @apply bg-blue-400 w-[30vw] p-2 border-2 border-black flex items-center justify-center flex-col
- }
+}
 
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1E40AF;
+  --secondary-color: #3B82F6;
+  --background-color: #F3F4F6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -30,219 +30,250 @@ body {
 }
 
 
- .App {
-    text-align: center;
-  }
-  
-  .dashboard {
-    width: calc(100vw - 200px); /* Full width minus sidebar */
-    max-height: calc(100vh - 110px); /* Full height minus navbar and footer */
-    margin-top: 60px; /* Align below the navbar */
-    margin-left: 200px; /* Align next to sidebar */
-    overflow-y: auto; /* Enable vertical scrolling for the entire dashboard */
-    padding: 16px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+.App {
+  text-align: center;
+}
+
+.dashboard {
+  width: calc(100vw - 200px);
+  /* Full width minus sidebar */
+  max-height: calc(100vh - 110px);
+  /* Full height minus navbar and footer */
+  margin-top: 60px;
+  /* Align below the navbar */
+  margin-left: 200px;
+  /* Align next to sidebar */
+  overflow-y: auto;
+  /* Enable vertical scrolling for the entire dashboard */
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 
-  /* Primary Button */
-  .btn-primary {
-    background-color: var(--primary-color);
-    color: rgb(255, 255, 255);
-    padding: 10px 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #3B82F6;
-  }
-  
-  /* Secondary Button */
-  .btn-secondary {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #E5E7EB;
-  }
-  
-  
-  /* Spacing utilities */
-  .spacing-xs {
-    margin-top: 4px;
-    margin-bottom: 4px;
-  }
-  
-  .spacing-sm {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-  
-  .spacing-md {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-  
-  .spacing-lg {
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-  
-  /* Text utilities */
-  .text-center {
-    text-align: center;
-  }
-  
-  .text-uppercase {
-    text-transform: uppercase;
-  }
-  
-  /* Flex utilities */
-  .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Card styles */
-  .card {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    border-radius: 8px;
-  }
-  
-  .content {
-    transition: margin-left 0.4s ease-in-out;
-  }
-  
-  .content.shifted {
-    margin-left: 250px;
-  }
+/* Primary Button */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  max-width: 150px;
+
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  max-width: 150px;
+}
+
+.btn-secondary:hover {
+  background-color: #E5E7EB;
+}
 
 
-/* Forms */
+/* Spacing utilities */
+.spacing-xs {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.spacing-sm {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.spacing-md {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.spacing-lg {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Flex utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 25%;
+  margin: .5rem 1rem;
+  flex-direction: column;
+}
+
+.content {
+  transition: margin-left 0.4s ease-in-out;
+}
+
+.content.shifted {
+  margin-left: 250px;
+}
+
+
+/* Form container */
 form {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    max-width: 600px;
-    margin: 1.5rem auto;
-    padding: 1.5rem; /* Add some padding to create the card effect */
-    border: 1px solid #ccc; /* Add a border to make it recognizable */
-    border-radius: 0.5rem; /* Rounded corners for the card */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the card */  
-  }
-  
-  form span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: 10px;
-    width: 100%;
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="url"],
-  select,
-  input[type="number"] {
-    width: 100%;
-    height: 35px;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    margin-bottom: 0.5rem;
-    margin-left: -0.1rem;
-  }
-  
-  input[type="checkbox"] {
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    margin-top: 0.5rem;
-    margin-left: 0.2rem;
-    display: block;
-    transform: scale(1.5)
-  }
-  
-  label {
-    display: block;
-    text-align: left;
-    margin: 2rem;
-    height: 35px;
-  }
-  
-  button[type="submit"] {
-    width: 200px;
-    height: 40px;
-    padding: 0.2rem 1rem;
-    margin-top: 1rem;
-    background-color: #3490dc;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #2779bd;
-  }
-  
-  .navbar {
-    height: 60px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  width: 60vw;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 1rem; /* Add gap between inputs */
+}
 
-  .sidebar {
-    width: 150px;
-    background-color:#2657d4;
-    color: #ccc;
-    padding: 20px;
-    position: fixed;
-    top: 40px; /* Navbar height */
-    left: 0;
-    height: calc(100vh); /* Full height minus navbar */
-    overflow-y: auto;
-    flex: auto;
-    flex-direction: column;
-  }
+/* Form label */
+label {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
 
-  .sidebar-content{
-    margin-left: 250px;
-    padding: 20px;
-    flex: 1;
-  }
+/* Input elements */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="url"],
+form input[type="number"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
 
-  li {
-list-style-type: none;
-color: white;
-  }
+/* Checkbox styling */
+input[type="checkbox"] {
+  margin-top: 0.5rem;
+  transform: scale(1.5);
+}
 
-  strong {
-    font-weight: bold;
-    color: #333;
-    font-size: 1.1em;
-    text-transform: uppercase;
+/* Button styling */
+form button,
+button[type="submit"] {
+  width: 100%; /* Full width in column layout */
+  max-width: 200px; /* Limit width */
+  padding: 0.2rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  align-self: center; /* Center align in column layout */
+}
+
+button[type="submit"]:hover {
+  background-color: #2779bd;
+}
+
+/* Form title */
+form span {
+  position: absolute;
+  top: -1.2rem; /* Adjust position to be above form */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.navbar {
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.sidebar {
+  width: 150px;
+  background-color: var(--primary-color);
+  color: #ccc;
+  padding: 20px;
+  position: fixed;
+  top: 40px;
+  /* Navbar height */
+  left: 0;
+  height: calc(100vh);
+  /* Full height minus navbar */
+  overflow-y: auto;
+  flex: auto;
+  flex-direction: column;
+}
+
+.sidebar-content {
+  margin-left: 250px;
+  padding: 20px;
+  flex: 1;
+}
+
+li {
+  list-style-type: none;
+  color: white;
+}
+
+strong {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+
+.product-card {
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* Adjust as needed */
+  display: inline-block;
+}
+.product-card:hover .product-name {
+  color: blue; /* Optional: Style the text on hover */
 }
