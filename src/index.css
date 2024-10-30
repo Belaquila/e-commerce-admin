@@ -61,7 +61,6 @@ body {
   border-radius: 8px;
   transition: background-color 0.3s;
   max-width: 150px;
-
 }
 
 .btn-primary:hover {
@@ -219,25 +218,26 @@ form span {
 }
 
 .navbar {
-  height: 60px;
+  background-color: #1E40AF;
+  height: px;
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: white;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  gap: 40vw;
 }
 
 .sidebar {
   width: 150px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: #ccc;
   padding: 20px;
   position: fixed;
-  top: 40px;
+  top: 70px;
   /* Navbar height */
   left: 0;
   height: calc(100vh);
@@ -256,6 +256,7 @@ form span {
 li {
   list-style-type: none;
   color: white;
+  padding: 15px;
 }
 
 strong {
@@ -266,14 +267,8 @@ strong {
 }
 
 
-.product-card {
-  cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px; /* Adjust as needed */
-  display: inline-block;
+.footer {
+ height: 30px;
+ 
 }
-.product-card:hover .product-name {
-  color: blue; /* Optional: Style the text on hover */
-}
+
