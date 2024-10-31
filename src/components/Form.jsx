@@ -50,7 +50,7 @@ function Form(props) {
     <form onSubmit={handleSubmit}>
 
       {/* Title */}
-      <div>
+      <div className="form"> 
         <label className="label">
           Title:
           <input

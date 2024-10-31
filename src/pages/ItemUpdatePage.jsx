@@ -27,8 +27,8 @@ function ItemUpdatePage(props) {
 
   return (
     <>
-    <h2 className="dashboard" style={{ fontWeight: 'bold',fontSize: '24px' }} >Update carefully item details and save changes</h2>
-    <div className="form">
+    <div className="dashboard">
+    <h2 style={{ fontWeight: 'bold',fontSize: '24px',padding: '30px' }} >Update carefully item details and save changes</h2>
       
       <form onSubmit={handleSubmit}>
         {Object.keys(updatedItem).map((key) => (

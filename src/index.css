@@ -50,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: absolute;
 }
 
 
@@ -140,6 +141,22 @@ body {
   margin-left: 250px;
 }
 
+.containerLimited{
+  top: 10vh;
+ height: 40vh;
+ position:absolute;
+ overflow-y: auto;
+}
+
+.containerList{
+  position: relative;
+  top : 34vh;
+  
+ }
+
+ .listItems{
+  margin-left: 200px;
+ }
 
 /* Form container */
 form {
@@ -154,6 +171,7 @@ form {
   border-radius: 0.5rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   gap: 1rem; /* Add gap between inputs */
+  margin-left: 5vw;
 }
 
 /* Form label */
@@ -268,7 +286,25 @@ strong {
 
 
 .footer {
- height: 30px;
- 
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  overflow-y: auto;
+  height: 8vh;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+  overflow-y: auto;
+}
+
+.github-icon {
+  overflow-y: auto;
+  width: 100%;
+  align-items: center;
 }
 

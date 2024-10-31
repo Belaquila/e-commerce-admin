@@ -3,7 +3,7 @@ import ListItem from "./ListItem";
 
 function List(props) {
   return (
-    <div className="flex flex-row flex-wrap " >
+    <div className="flex flex-row flex-wrap ml-14" >
       {props.itemsToDisplay.map((item, index) => {
         return (
           <ListItem className="" key= {index} item={item} deleteItem={props.deleteItem} />
